@@ -38,7 +38,7 @@ if (btnCadastrar) {
       });
       msg.style.color = "green";
       msg.textContent = "✅ Cadastro realizado com sucesso!";
-      setTimeout(() => window.location.href = "login.html", 1500);
+      setTimeout(() => window.location.href = "/index.html", 1500);
     } catch (error) {
       msg.style.color = "red";
       msg.textContent = "❌ Erro ao cadastrar: " + error.message;
@@ -64,9 +64,9 @@ if (btnLogin) {
 
       // Redireciona com base no tipo
       if (userData.tipoUsuario === "admin") {
-        window.location.href = "admin-agendamentos.html";
+        window.location.href = "./page/admin-agendamentos.html";
       } else {
-        window.location.href = "agendamento.html";
+        window.location.href = "./page/agendamento.html";
       }
     } catch (error) {
       msg.style.color = "red";
@@ -82,7 +82,7 @@ onAuthStateChanged(auth, async (user) => {
   if (path.includes("agendamento") || path.includes("admin-agendamentos")) {
     if (!user) {
       alert("Você precisa fazer login para acessar esta página.");
-      window.location.href = "login.html";
+      window.location.href = "/index.html";
       return;
     }
 
@@ -92,7 +92,7 @@ onAuthStateChanged(auth, async (user) => {
     // Protege página admin
     if (path.includes("admin-agendamentos") && tipo !== "admin") {
       alert("Acesso restrito a administradores.");
-      window.location.href = "agendamento.html";
+      window.location.href = "./page/agendamento.html";
     }
   }
 });
@@ -100,5 +100,5 @@ onAuthStateChanged(auth, async (user) => {
 // === LOGOUT ===
 export async function sair() {
   await signOut(auth);
-  window.location.href = "login.html";
+  window.location.href = "/index.html";
 }
