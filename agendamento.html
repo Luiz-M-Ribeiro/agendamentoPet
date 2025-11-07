@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agendamento | Focinho Gelado</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Focinho Gelado - Agendamento</h1>
+    <button id="btnLogout">Sair</button>
+  </header>
+
+  <main style="max-width:600px;margin:30px auto;background:#fff;padding:25px;border-radius:15px;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+    <h2>Marque um horário para seu pet 🐶</h2>
+    <form id="formAgendamento">
+      <input type="text" id="nomeDono" placeholder="Nome do dono" required>
+      <input type="text" id="nomePet" placeholder="Nome do pet" required>
+      <input type="tel" id="telefone" placeholder="Telefone" required>
+      
+      <select id="servico" required>
+        <option value="">Selecione o serviço</option>
+        <option value="Banho">Banho</option>
+        <option value="Tosa">Tosa</option>
+        <option value="Consulta Veterinária">Consulta Veterinária</option>
+        <option value="Vacinação">Vacinação</option>
+      </select>
+
+      <input type="date" id="data" required>
+      <input type="time" id="hora" required>
+
+      <textarea id="observacoes" placeholder="Observações (opcional)" rows="3"></textarea>
+
+      <!-- ✅ BOTÃO DE AGENDAR -->
+      <button type="submit" id="btnAgendar">Agendar</button>
+      <p id="msg"></p>
+    </form>
+  </main>
+
+  <script type="module" src="agendamento.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin | Focinho Gelado</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Painel do Administrador 🐾</h1>
+    <button id="btnLogout">Sair</button>
+  </header>
+
+  <main style="max-width:900px;margin:30px auto;background:#fff;padding:25px;border-radius:15px;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+    <h2>Agendamentos</h2>
+
+    <table id="tabelaAgendamentos">
+      <thead>
+        <tr>
+          <th>Nome do Dono</th>
+          <th>Nome do Pet</th>
+          <th>Telefone</th>
+          <th>Serviço</th>
+          <th>Data</th>
+          <th>Hora</th>
+          <th>Observações</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody id="listaAgendamentos">
+        <!-- Populado dinamicamente -->
+      </tbody>
+    </table>
+  </main>
+
+  <script type="module" src="admin-agendamentos.js"></script>
+</body>
+</html>

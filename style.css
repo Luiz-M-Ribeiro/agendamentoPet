@@ -1,0 +1,117 @@
+/* === ESTILO GERAL === */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #38f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  color: #023047;
+}
+
+a {
+  color: #2124bc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  background-color: #03ffbc;
+  color: #000000;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #00fbab;
+}
+
+/* === CONTAINERS DE LOGIN / CADASTRO === */
+.auth-container {
+  max-width: 400px;
+  margin: 100px auto;
+  background: #0dbee6;
+  border-radius: 15px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+/* === CABEÇALHO DAS PÁGINAS PROTEGIDAS === */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #3393ab;
+  color: #fff;
+  padding: 15px 25px;
+}
+
+header h1 {
+  font-size: 22px;
+}
+
+header button {
+  background-color: #00fbb8;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+header button:hover {
+  background-color: #03ffc0;
+}
+
+/* === MENSAGEM DE FEEDBACK === */
+#msg {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background-color: #f6b352;
+  color: white;
+}
+
+td[contenteditable="true"] {
+  background-color: #fff8e1;
+  outline: none;
+}
+
+button.btnSalvar, button.btnExcluir {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
